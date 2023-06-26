@@ -1,7 +1,7 @@
 import Modal from "./modal";
 
 export interface ModalProps {
-    state: string;
+    state: boolean;
 }
 
 export default Modal
