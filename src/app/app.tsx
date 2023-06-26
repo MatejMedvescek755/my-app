@@ -9,7 +9,6 @@ const App = (): JSX.Element => {
   const [ modalState, setModalState ] = useState(false)
   const openState = () => {
     setModalState(true)
-    console.log(modalState)
   }
   return (
     <main className={styles.main}>
@@ -17,7 +16,7 @@ const App = (): JSX.Element => {
         modal button
       </button>
       <div className="">
-        <Modal {...{ isOpen: modalState, setModalState:setModalState }}></Modal>
+        <Modal {...{ isOpen: modalState, Title:"Authentication", setModalState:setModalState }}></Modal>
       </div>
     </main>
   );

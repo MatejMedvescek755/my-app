@@ -4,15 +4,15 @@ import { ModalProps } from "./index"
 const Modal = (props: ModalProps) => {
     const changeState = () =>{
         props.setModalState(false)
-        console.log(false)
     }
 
     return (
-        <dialog open={props.isOpen} className="w-16 bg-white border-1-black absolute top-20 left-50">
-            <div className="h-20">
-                <p>Greetings, one and all!</p>
+        <dialog open={props.isOpen} className=" bg-white border-1-black absolute top-20 left-50">
+            <div className="h-20 pt-4 pb-4">
+                <p className="">{props.Title}</p>
                 <form method="dialog">
-                    <button onClick={changeState}>OK</button>
+                    <button className="p-2" onClick={changeState}>confirm
+                    </button>
                 </form>
             </div>
         </dialog>
