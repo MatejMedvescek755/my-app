@@ -2,9 +2,9 @@ import Modal from "./modal";
 
 export interface ModalProps {
     isOpen: boolean;
-    Title:string;
-    setModalState: any;
-
+    title:string;
+    onToggle: React.Dispatch<React.SetStateAction<boolean>>;
+    fields: Array<string>;
 }
 
 export default Modal

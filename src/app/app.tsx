@@ -6,18 +6,18 @@ import { useState } from "react";
 
 
 const App = (): JSX.Element => {
-  const [ modalState, setModalState ] = useState(false)
+  const [ modalState, onToggle ] = useState(false)
   const openState = () => {
-    setModalState(true)
+    onToggle(true)
   }
   return (
     <main className={styles.main}>
+      <div>
       <button className="w-5 h-3 bg-white" onClick={openState} >
         modal button
       </button>
-      <div className="">
-        <Modal {...{ isOpen: modalState, Title:"Authentication", setModalState:setModalState }}></Modal>
       </div>
+        <Modal {...{isOpen:modalState, title:"Authentication", onToggle:onToggle, fields:["email","password","confirm password"] }}></Modal>
     </main>
   );
 };
