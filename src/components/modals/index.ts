@@ -1,7 +1,9 @@
 import Modal from "./modal";
 
 export interface ModalProps {
-    state: boolean;
+    isOpen: boolean;
+    setModalState: any;
+
 }
 
 export default Modal

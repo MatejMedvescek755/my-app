@@ -17,7 +17,7 @@ const App = (): JSX.Element => {
         modal button
       </button>
       <div className="">
-        <Modal {...{ state: modalState }}></Modal>
+        <Modal {...{ isOpen: modalState, setModalState:setModalState }}></Modal>
       </div>
     </main>
   );
